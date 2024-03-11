@@ -11,9 +11,30 @@
 
     <div id="app">
         <h1>{{ message }}</h1>
+        <br>
         <img :src="link" alt="">
+        <br>
         {{number + 10}}
-        <button @click="doThis">{{count}}</button>
+        <br>
+        <button @click="count++">{{count}}</button>
+        <br>
+        <input type="text" v-model.lazy="newItem" placeholder="It's a .lazy v-model">
+        <br>
+        {{newItem}}
+        <br>
+        <span>Ice-cream flavours: </span>
+        <input type="checkbox" value="shiet" v-model="flavours">S***t
+        <input type="checkbox" value="mud" v-model="flavours">Mud
+        <input type="checkbox" value="christ" v-model="flavours">C***t
+        <input type="checkbox" value="bho" v-model="flavours">Bho
+        <br>
+        <span>You choose: {{flavours}}</span>
+        <br>
+        <button @click="tryThis">PIGIAMI</button>
+        <br>
+        <button @click="sayHello('Hello my friend, remember to use single tick here, not the double or you will be in trouble..lol')">Please greeting to me</button>
+        <br>
+        <div style="background-color: palegoldenrod;" @click.ctrl="doSomething">TRY ME CLICKING WITH CTRL</div>
     </div>
 
     <div id="tryDiv">
