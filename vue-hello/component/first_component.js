@@ -12,9 +12,9 @@ createApp
     }
 }).mount("app") */
 
-import { createApp } from 'vue'
+let { createApp } = Vue
 
-const tryOne = createApp({
+createApp({
     data()
     {
         return{
@@ -22,7 +22,5 @@ const tryOne = createApp({
             name: "S_"
         }
     }
-})
-
-tryOne.mount("#tryDiv")
+}).mount("#tryDiv");
 
