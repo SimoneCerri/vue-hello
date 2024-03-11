@@ -1,10 +1,12 @@
-let createApp
+createApp
 ({
     data()
     {
         return 
         {
-            message: prova
+            message: "prova"
         }
     }
-}).mount("#app")
+}).mount("#app");
+
+console.log("porcoddio");
