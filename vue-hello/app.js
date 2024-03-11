@@ -1,12 +1,9 @@
-createApp
-({
-    data()
-    {
-        return 
-        {
+createApp({
+    data(){
+        return {
             message: "prova"
         }
     }
 }).mount("#app");
 
-console.log("porcoddio");
+console.log("ciah");
