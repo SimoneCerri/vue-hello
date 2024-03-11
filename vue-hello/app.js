@@ -13,6 +13,12 @@ createApp
             count : 0,
             newItem: "",
             flavours: [],
+            highPrio: true,
+            styleObject:
+            {
+                color: 'red',
+                fontSize: '50px'
+            },
         }
     },
     methods:

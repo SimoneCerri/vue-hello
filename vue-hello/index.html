@@ -7,20 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
+<style>
+    .priority
+    {
+        background-color: palegoldenrod;
+        max-width: 250px;
+    }
+</style>
+
 <body>
 
     <div id="app">
-        <h1>{{ message }}</h1>
+        <h1>{{ message }}</h1> <!-- normal insert in HTML -->
         <br>
-        <img :src="link" alt="">
+        <img :src="link" alt=""> <!-- insert of a link/url -->
         <br>
-        {{number + 10}}
+        {{number + 10}} <!-- math inside HTML -->
         <br>
-        <button @click="count++">{{count}}</button>
+        <button @click="count++">{{count}}</button> <!-- @click propriety -->
         <br>
-        <input type="text" v-model.lazy="newItem" placeholder="It's a .lazy v-model">
+        <input type="text" v-model.lazy="newItem" placeholder="It's a .lazy v-model"> <!-- .lazy v-model -->
         <br>
-        {{newItem}}
+        {{newItem}} <!-- appear when exit from the input -->
         <br>
         <span>Ice-cream flavours: </span>
         <input type="checkbox" value="shiet" v-model="flavours">S***t
@@ -28,18 +36,20 @@
         <input type="checkbox" value="christ" v-model="flavours">C***t
         <input type="checkbox" value="bho" v-model="flavours">Bho
         <br>
-        <span>You choose: {{flavours}}</span>
+        <span>You choose: {{flavours}}</span> <!-- array of elements reactive from checkboxs -->
         <br>
-        <button @click="tryThis">PIGIAMI</button>
+        <button @click="tryThis">PIGIAMI</button> <!-- function\method on the @click -->
         <br>
-        <button @click="sayHello('Hello my friend, remember to use single tick here, not the double or you will be in trouble..lol')">Please greeting to me</button>
+        <button @click="sayHello('Hello my friend, remember to use single tick here, not the double or you will be in trouble..lol')">Please greeting to me</button> <span><-- REMEMBER what inside the alert</span> <!-- something similar to the other example but with string inside the HTML instead of the function/method -->
         <br>
-        <div style="background-color: palegoldenrod;" @click.ctrl="doSomething">TRY ME CLICKING WITH CTRL</div>
+        <div :class="{priority: highPrio}" @click.ctrl="doSomething">TRY ME CLICKING WITH CTRL</div> <!-- adding class with a booleaner value who trigger the style added + @click with more attribute (CTRL in this case) -->
+        <br>
+        <div :style="styleObject"></div> <!-- not working (try to add an object of style's attributes) -->
     </div>
 
     <div id="tryDiv">
-        <span :id></span>
-        <span>{{name}}</span>
+        <span :id></span> <!-- try to add the ID with shorthand -->
+        <span>{{name}}</span> <!-- not working, problem with external file ? -->
     </div>
 
     <script src="https://unpkg.com/vue@3"></script>
